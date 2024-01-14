@@ -31,3 +31,7 @@ Copirer coller les 3 lignes js deposer juste avant la cloture de la balise </bod
 
 
 on a l'affichage html/css mais pas lejs.
+
+On teste en entrant manuellement dans la bdd avec 2 articles
+
+Pour afficher les articles , on créé une boucle foreach
