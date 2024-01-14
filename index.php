@@ -25,12 +25,15 @@ $articles= afficher();
   <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Pretotheque</a>
+    <a class="navbar-brand" href="#"><h1>Pretotheque</h1></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="admin/index.php">admin</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">articles</a>
         </li>
@@ -75,19 +78,17 @@ $articles= afficher();
 
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" 
-            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
-             focusable="false"><title><?= $article->nom ?></title><rect width="100%" height="100%" fill="#55595c"/>
+            <title><?= $article->nom ?></title>
             <img src="<?= $article->image ?>"></svg>
 
             <div class="card-body">
-              <p class="card-text"><?= $article->description ?></p>
+              <p class="card-text"><?= substr($article->description, 0,100); ?></p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">voir</button>
                 </div>
                 
-                <small class="text-muted"><?= $article->prix ?></small>
+                <small class="text-muted"><?= $article->prix ?> €</small>
               </div>
             </div>
           </div>
@@ -113,7 +114,8 @@ $articles= afficher();
 </footer>
 
 
-    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
       
   </body>
